@@ -21,10 +21,12 @@ let mage = Mage()
 class Tower {
     var towerHealth: Int
     var gold: Int
+    var army: [Unit]
     
-    init(towerHealth: Int) {
-        self.towerHealth = towerHealth
+    init() {
+        self.towerHealth = 1000
         self.gold = 300
+        self.army = [mage]
     }
     
     func getHealth() -> Int {
