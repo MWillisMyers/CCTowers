@@ -13,8 +13,11 @@ class GameScene: SKScene {
     
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
+    let player = SKSpriteNode(imageNamed: "Spaceship")
     
     override func didMove(to view: SKView) {
+        
+        player.position = CGPoint(x: size.width * 0.1, y: size.height * 0.5)
         
         // Get label node from scene and store it for use later
         self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
@@ -35,6 +38,7 @@ class GameScene: SKScene {
                                               SKAction.fadeOut(withDuration: 0.5),
                                               SKAction.removeFromParent()]))
         }
+        
     }
     
     
@@ -86,4 +90,6 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
     }
+    
 }
+
