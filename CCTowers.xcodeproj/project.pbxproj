@@ -15,7 +15,6 @@
 		342C83531DD61257004920BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 342C83511DD61257004920BC /* Main.storyboard */; };
 		342C83551DD61257004920BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 342C83541DD61257004920BC /* Assets.xcassets */; };
 		342C83581DD61257004920BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 342C83561DD61257004920BC /* LaunchScreen.storyboard */; };
-		C22748FE1DD628F600791455 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22748FD1DD628F600791455 /* TestFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		342C83541DD61257004920BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		342C83571DD61257004920BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		342C83591DD61257004920BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C22748FD1DD628F600791455 /* TestFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +66,6 @@
 				342C834D1DD61257004920BC /* GameScene.swift */,
 				342C834F1DD61257004920BC /* GameViewController.swift */,
 				342C83511DD61257004920BC /* Main.storyboard */,
-				C22748FD1DD628F600791455 /* TestFile.swift */,
 				342C83541DD61257004920BC /* Assets.xcassets */,
 				342C83561DD61257004920BC /* LaunchScreen.storyboard */,
 				342C83591DD61257004920BC /* Info.plist */,
@@ -152,7 +149,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				342C834E1DD61257004920BC /* GameScene.swift in Sources */,
-				C22748FE1DD628F600791455 /* TestFile.swift in Sources */,
 				342C83501DD61257004920BC /* GameViewController.swift in Sources */,
 				342C83481DD61257004920BC /* AppDelegate.swift in Sources */,
 			);
