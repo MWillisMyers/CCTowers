@@ -15,6 +15,7 @@
 		342C83531DD61257004920BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 342C83511DD61257004920BC /* Main.storyboard */; };
 		342C83551DD61257004920BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 342C83541DD61257004920BC /* Assets.xcassets */; };
 		342C83581DD61257004920BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 342C83561DD61257004920BC /* LaunchScreen.storyboard */; };
+		C2A2947A1DD647ED0048D5ED /* Tower.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A294791DD647ED0048D5ED /* Tower.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		342C83541DD61257004920BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		342C83571DD61257004920BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		342C83591DD61257004920BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2A294791DD647ED0048D5ED /* Tower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tower.swift; path = ../Tower.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		342C83461DD61257004920BC /* CCTowers */ = {
 			isa = PBXGroup;
 			children = (
+				C2A294791DD647ED0048D5ED /* Tower.swift */,
 				342C83471DD61257004920BC /* AppDelegate.swift */,
 				342C83491DD61257004920BC /* GameScene.sks */,
 				342C834B1DD61257004920BC /* Actions.sks */,
@@ -151,6 +154,7 @@
 				342C834E1DD61257004920BC /* GameScene.swift in Sources */,
 				342C83501DD61257004920BC /* GameViewController.swift in Sources */,
 				342C83481DD61257004920BC /* AppDelegate.swift in Sources */,
+				C2A2947A1DD647ED0048D5ED /* Tower.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
