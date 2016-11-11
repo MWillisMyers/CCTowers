@@ -21,6 +21,7 @@ class Melee {
     var unitDefense: Int
     var unitRange: Int
     var unitSpeed: Int
+    var isLive: Bool = true
     
     init(unitHealth: Int, unitAttack: Int, unitDefense: Int, unitRange: Int, unitSpeed: Int) {
         self.unitHealth = unitHealth
@@ -30,10 +31,7 @@ class Melee {
         self.unitSpeed = unitSpeed
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+//  All the getters
     func getHealth() -> Int {
         return self.unitHealth
     }
@@ -54,7 +52,42 @@ class Melee {
         return self.unitSpeed
     }
     
+//  All the setters
     func setHealth(health: Int) {
         self.unitHealth = health
+    }
+    
+    func setAttach(attack: Int) {
+        self.unitAttack = attack
+    }
+    
+    func setDefense(defense: Int) {
+        self.unitDefense = defense
+    }
+    
+    func setRange(range: Int) {
+        self.unitRange = range
+    }
+    
+    func setSpeed(speed: Int) {
+        self.unitSpeed = speed
+    }
+    
+//  Other methods
+    func upgrade() {
+        // When upgraded, boost stats
+        self.unitHealth = getHealth() + 10
+        self.unitAttack = getAttack() + 10
+        self.unitDefense = getDefense() + 10
+        self.unitRange = getRange() + 10
+        self.unitSpeed = getSpeed() + 10
+    }
+    
+    func isDead() -> Bool {
+        if isLive {
+            return false
+        } else {
+            return true
+        }
     }
 }
