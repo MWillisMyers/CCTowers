@@ -22,12 +22,14 @@ class Melee {
     var unitRange: Int
     var unitSpeed: Int
     var isLive: Bool = true
+    var cost: Int
     
     init() {
         self.unitHealth = 80
         self.unitAttack = 20
         self.unitRange = 1
         self.unitSpeed = 10
+        self.cost = 100
     }
     
 //  All the getters
@@ -89,12 +91,14 @@ class Ranged {
     var unitRange: Int
     var unitSpeed: Int
     var isLive: Bool = true
+    var cost: Int
     
     init() {
         self.unitHealth = 70
-        self.unitAttack = 10
+        self.unitAttack = 15
         self.unitRange = 2
         self.unitSpeed = 15
+        self.cost = 150
     }
     
     //  All the getters
@@ -156,12 +160,14 @@ class Mage {
     var unitRange: Int
     var unitSpeed: Int
     var isLive: Bool = true
+    var cost: Int
     
     init() {
         self.unitHealth = 50
         self.unitAttack = 20
         self.unitRange = 3
         self.unitSpeed = 15
+        self.cost = 200
     }
     
     //  All the getters

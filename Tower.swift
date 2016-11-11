@@ -14,13 +14,17 @@ import Foundation
 //    func setHealth()
 //}
 
+let melee = Melee()
+let ranged = Ranged()
+let mage = Mage()
+
 class Tower {
     var towerHealth: Int
     var gold: Int
     
     init(towerHealth: Int) {
         self.towerHealth = towerHealth
-        self.gold = 0
+        self.gold = 300
     }
     
     func getHealth() -> Int {
