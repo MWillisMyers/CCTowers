@@ -8,13 +8,13 @@
 
 import Foundation
 
-protocol Base {
-    var towerHealth: Int { get set }
+//protocol Base {
+//    var towerHealth: Int { get set }
 //    func getHealth()
 //    func setHealth()
-}
+//}
 
-class Tower: Base {
+class Tower {
     var towerHealth: Int
     var gold: Int
     
