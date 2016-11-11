@@ -20,7 +20,7 @@ class GameScene: SKScene {
         self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
         if let label = self.label {
             label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
+            label.run(SKAction.fadeIn(withDuration: 3.0))
         }
         
         // Create shape node to use during mouse interaction
@@ -28,9 +28,9 @@ class GameScene: SKScene {
         self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
         
         if let spinnyNode = self.spinnyNode {
-            spinnyNode.lineWidth = 2.5
+            spinnyNode.lineWidth = 1.5
             
-            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(M_PI), duration: 1)))
+            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(M_PI), duration: 0.5)))
             spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
                                               SKAction.fadeOut(withDuration: 0.5),
                                               SKAction.removeFromParent()]))
@@ -57,7 +57,7 @@ class GameScene: SKScene {
     func touchUp(atPoint pos : CGPoint) {
         if let n = self.spinnyNode?.copy() as! SKShapeNode? {
             n.position = pos
-            n.strokeColor = SKColor.red
+            n.strokeColor = SKColor.yellow
             self.addChild(n)
         }
     }
