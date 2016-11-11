@@ -19,17 +19,15 @@ import Foundation
 class Melee {
     var unitHealth: Int
     var unitAttack: Int
-    var unitDefense: Int
     var unitRange: Int
     var unitSpeed: Int
     var isLive: Bool = true
     
-    init(unitHealth: Int, unitAttack: Int, unitDefense: Int, unitRange: Int, unitSpeed: Int) {
-        self.unitHealth = unitHealth
-        self.unitAttack = unitAttack
-        self.unitDefense = unitDefense
-        self.unitRange = unitDefense
-        self.unitSpeed = unitSpeed
+    init() {
+        self.unitHealth = 80
+        self.unitAttack = 20
+        self.unitRange = 1
+        self.unitSpeed = 10
     }
     
 //  All the getters
@@ -39,10 +37,6 @@ class Melee {
     
     func getAttack() -> Int {
         return self.unitAttack
-    }
-    
-    func getDefense() -> Int {
-        return self.unitDefense
     }
     
     func getRange() -> Int {
@@ -62,10 +56,6 @@ class Melee {
         self.unitAttack = attack
     }
     
-    func setDefense(defense: Int) {
-        self.unitDefense = defense
-    }
-    
     func setRange(range: Int) {
         self.unitRange = range
     }
@@ -79,7 +69,6 @@ class Melee {
         // When upgraded, boost stats
         self.unitHealth = getHealth() + 10
         self.unitAttack = getAttack() + 10
-        self.unitDefense = getDefense() + 10
         self.unitRange = getRange() + 10
         self.unitSpeed = getSpeed() + 10
     }
@@ -97,17 +86,15 @@ class Melee {
 class Ranged {
     var unitHealth: Int
     var unitAttack: Int
-    var unitDefense: Int
     var unitRange: Int
     var unitSpeed: Int
     var isLive: Bool = true
     
-    init(unitHealth: Int, unitAttack: Int, unitDefense: Int, unitRange: Int, unitSpeed: Int) {
-        self.unitHealth = unitHealth
-        self.unitAttack = unitAttack
-        self.unitDefense = unitDefense
-        self.unitRange = unitDefense
-        self.unitSpeed = unitSpeed
+    init() {
+        self.unitHealth = 70
+        self.unitAttack = 10
+        self.unitRange = 2
+        self.unitSpeed = 15
     }
     
     //  All the getters
@@ -118,11 +105,7 @@ class Ranged {
     func getAttack() -> Int {
         return self.unitAttack
     }
-    
-    func getDefense() -> Int {
-        return self.unitDefense
-    }
-    
+
     func getRange() -> Int {
         return self.unitRange
     }
@@ -139,11 +122,7 @@ class Ranged {
     func setAttach(attack: Int) {
         self.unitAttack = attack
     }
-    
-    func setDefense(defense: Int) {
-        self.unitDefense = defense
-    }
-    
+
     func setRange(range: Int) {
         self.unitRange = range
     }
@@ -157,7 +136,6 @@ class Ranged {
         // When upgraded, boost stats
         self.unitHealth = getHealth() + 10
         self.unitAttack = getAttack() + 10
-        self.unitDefense = getDefense() + 10
         self.unitRange = getRange() + 10
         self.unitSpeed = getSpeed() + 10
     }
@@ -175,17 +153,15 @@ class Ranged {
 class Mage {
     var unitHealth: Int
     var unitAttack: Int
-    var unitDefense: Int
     var unitRange: Int
     var unitSpeed: Int
     var isLive: Bool = true
     
-    init(unitHealth: Int, unitAttack: Int, unitDefense: Int, unitRange: Int, unitSpeed: Int) {
-        self.unitHealth = unitHealth
-        self.unitAttack = unitAttack
-        self.unitDefense = unitDefense
-        self.unitRange = unitDefense
-        self.unitSpeed = unitSpeed
+    init() {
+        self.unitHealth = 50
+        self.unitAttack = 20
+        self.unitRange = 3
+        self.unitSpeed = 15
     }
     
     //  All the getters
@@ -195,10 +171,6 @@ class Mage {
     
     func getAttack() -> Int {
         return self.unitAttack
-    }
-    
-    func getDefense() -> Int {
-        return self.unitDefense
     }
     
     func getRange() -> Int {
@@ -218,10 +190,6 @@ class Mage {
         self.unitAttack = attack
     }
     
-    func setDefense(defense: Int) {
-        self.unitDefense = defense
-    }
-    
     func setRange(range: Int) {
         self.unitRange = range
     }
@@ -235,7 +203,6 @@ class Mage {
         // When upgraded, boost stats
         self.unitHealth = getHealth() + 10
         self.unitAttack = getAttack() + 10
-        self.unitDefense = getDefense() + 10
         self.unitRange = getRange() + 10
         self.unitSpeed = getSpeed() + 10
     }
