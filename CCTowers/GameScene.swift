@@ -20,15 +20,15 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         rangerAtlas = SKTextureAtlas(named: "ArcherWalking")
         
-        for var i in 0...rangerAtlas.textureNames.count {
-            var Name = "Archer Girl_\(i).png"
-            rangerArray.append(SKTexture(imageNamed: Name))
-        }
-        
-        rangerNode = SKSpriteNode(imageNamed: rangerAtlas.textureNames[0])
-        rangerNode.size = CGSize(width: 70, height: 140)
-        rangerNode.position = CGPoint(x: self.size.width / 2, y: self.size.height / 2)
-        self.addChild(rangerNode)
+        //for var i in 0...rangerAtlas.textureNames.count {
+    //        var Name = "Archer Girl_\(i).png"
+      //      rangerArray.append(SKTexture(imageNamed: Name))
+    //}
+    
+        //rangerNode = SKSpriteNode(imageNamed: rangerAtlas.textureNames[0])
+      //  rangerNode.size = CGSize(width: 70, height: 140)
+        //rangerNode.position = CGPoint(x: self.size.width / 2, y: self.size.height / 2)
+       // self.addChild(rangerNode)
     }
     
     
