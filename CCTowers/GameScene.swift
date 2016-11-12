@@ -25,7 +25,7 @@ class GameScene: SKScene {
     var knight: SKNode! = nil
     var mage: SKNode! = nil
     var viking: SKNode! = nil
-    let spawn = CGPoint(x: 10, y: 30)
+    let spawn = CGPoint(x: -900, y: -800)
     
 
     override func didMove(to view: SKView) {
