@@ -25,7 +25,6 @@ class Projectile {
             return false
         } else {
             return true
-            // Call Tower GoldGen here
         }
     }
 }

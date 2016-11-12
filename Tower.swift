@@ -27,6 +27,7 @@ class Tower {
     var attack: Int
     var attackSpeed: Int
     var range: Int
+    var isAlive: Bool
     
     init() {
         self.towerHealth = 1000
@@ -35,6 +36,7 @@ class Tower {
         self.attack = 10
         self.attackSpeed = 15
         self.range = 3
+        self.isAlive = true
     }
     
     func getHealth() -> Int {
@@ -72,6 +74,14 @@ class Tower {
                 self.gold -= heavy.cost
             }
         break
+        }
+    }
+    
+    func isDead() -> Bool {
+        if self.isAlive {
+            return false
+        } else {
+            return false
         }
     }
 }

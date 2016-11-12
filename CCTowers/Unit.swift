@@ -59,6 +59,9 @@ class Unit {
     //  All the setters
     func setHealth(health: Int) {
         self.unitHealth = health
+        if self.unitHealth <= 0 {
+            self.isLive = false
+        }
     }
     
     func setAttach(attack: Int) {
@@ -153,4 +156,9 @@ enum UnitType {
     case Ranged
     case Mage
     case Heavy
+}
+
+func damage(unit1: Unit, unit2: Unit) {
+    unit1.setHealth(health: unit1.getHealth() - unit2.getAttack())
+    unit2.setHealth(health: unit2.getHealth() - unit1.getAttack())
 }
