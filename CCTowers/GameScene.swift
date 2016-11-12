@@ -21,6 +21,8 @@ class GameScene: SKScene {
     var mageButton: SKSpriteNode! = nil
     var tankButton: SKSpriteNode! = nil
     
+    var music: SKAudioNode!
+    
     var archer: SKNode! = nil
     var knight: SKNode! = nil
     var mage: SKNode! = nil
@@ -53,6 +55,8 @@ class GameScene: SKScene {
         tankButton.position = CGPoint(x: 552.401, y: 795);
         tankButton.size = mySize
         
+        music = SKAudioNode(fileNamed: "Waterflame - Donkey Island - Castlestorm OST.mp3")
+        addChild(music)
         
         rollingCamera.addChild(archerButton)
         rollingCamera.addChild(knightButton)
