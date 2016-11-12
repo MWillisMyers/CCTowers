@@ -99,11 +99,6 @@ class EnemyTower: Tower {
     }
     
     func spawnEnemies() {
-        var timer = Timer()
-        timer = Timer.scheduledTimer(timeInterval: 1,
-                             target: self,
-                             selector: Selector("self.addUnit(unit: self.getRandEnemy())"),
-                             userInfo: nil,
-                             repeats: true)
+        var timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: Selector(self.addUnit(unit: self.getRandEnemy()) as! String), userInfo: nil, repeats: true)
     }
 }
