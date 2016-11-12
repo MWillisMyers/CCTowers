@@ -11,20 +11,33 @@ import SpriteKit
 
 
 
+
 class GameScene: SKScene {
     
     
     var rollingCamera = SKCameraNode()
-    var archerButton = SKSpriteNode()
-    var knightButton = SKSpriteNode()
-    var mageButton = SKSpriteNode()
+    var archerButton: SKNode! = nil
+    var knightButton: SKNode! = nil
+    var mageButton: SKNode! = nil
+    var tankButton: SKNode! = nil
     
 
     override func didMove(to view: SKView) {
         
         rollingCamera = self.childNode(withName: "Camera") as! SKCameraNode
-        archerButton = self.childNode(withName: "ArcherButton") as! SKSpriteNode
+        archerButton = SKSpriteNode(color: SKColor.red, size: CGSize(width: 100, height: 44))
+        archerButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY);
+        knightButton = SKSpriteNode(color: SKColor.red, size: CGSize(width: 100, height: 44))
+        knightButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY);
+        mageButton = SKSpriteNode(color: SKColor.red, size: CGSize(width: 100, height: 44))
+        mageButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY);
+        tankButton = SKSpriteNode(color: SKColor.red, size: CGSize(width: 100, height: 44))
+        tankButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY);
         
+        self.addChild(archerButton)
+        self.addChild(knightButton)
+        self.addChild(mageButton)
+        self.addChild(tankButton)
     }
     
     
@@ -35,7 +48,16 @@ class GameScene: SKScene {
                 let location = touch.location(in: self)
                 // Check if the location of the touch is within the button's bounds
                 if archerButton.contains(location) {
-                    print("tapped!")
+                    print("ARCHER tapped!")
+                }
+                if knightButton.contains(location) {
+                    print("KNIGHT tapped!")
+                }
+                if mageButton.contains(location) {
+                    print("MAGE tapped!")
+                }
+                if tankButton.contains(location) {
+                    print("TANK tapped!")
                 }
             }
         }
