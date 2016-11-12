@@ -75,3 +75,30 @@ class Tower {
         }
     }
 }
+
+class EnemyTower: Tower {
+
+    func getRandEnemy() -> UnitType {
+        var randNum = arc4random_uniform(4) + 1
+        var unit: UnitType = UnitType.Melee
+        
+        if randNum == 1 {
+            unit = UnitType.Melee
+        }
+        if randNum == 2 {
+            unit = UnitType.Ranged
+        }
+        if randNum == 3 {
+            unit = UnitType.Mage
+        }
+        if randNum == 4 {
+            unit = UnitType.Heavy
+        }
+        
+        return unit
+    }
+    
+    func spawnEnemies() {
+        var timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: Selector(self.addUnit(unit: self.getRandEnemy()) as! String), userInfo: nil, repeats: true)
+    }
+}
