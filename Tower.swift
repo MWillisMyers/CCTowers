@@ -29,6 +29,8 @@ class Tower {
     var range: Int
     var isAlive: Bool
     
+    var goldTimer = Timer()
+    
     init() {
         self.towerHealth = 1000
         self.gold = 300
@@ -47,8 +49,12 @@ class Tower {
         self.towerHealth = health
     }
     
-    func goldGen(kills: Int) {
+    func goldKills(kills: Int) {
         self.gold += kills * 10
+    }
+    
+    func goldGen() {
+        goldTimer = Timer.scheduledTimer(withTimeInterval: 15, repeats: true, block: {_ in self.gold += 15})
     }
     
     func addUnit(unit: UnitType) {
