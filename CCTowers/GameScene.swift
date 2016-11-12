@@ -50,11 +50,8 @@ class GameScene: SKScene {
 
         archer = SKSpriteNode(imageNamed: "Archer Lady.png")
         knight = SKSpriteNode(imageNamed: "Knight Dude.png")
-        knight.position = spawn
         mage = SKSpriteNode(imageNamed: "Mage.png")
-        mage.position = spawn
         viking = SKSpriteNode(imageNamed: "Viking.png")
-        viking.position = spawn
         
     }
     
@@ -72,12 +69,18 @@ class GameScene: SKScene {
                 }
                 if knightButton.contains(location) {
                     print("KNIGHT tapped!")
+                    knight.position = spawn
+                    self.addChild(knight)
                 }
                 if mageButton.contains(location) {
                     print("MAGE tapped!")
+                    mage.position = spawn
+                    self.addChild(mage)
                 }
                 if tankButton.contains(location) {
                     print("TANK tapped!")
+                    viking.position = spawn
+                    self.addChild(viking)
                 }
             }
         }
