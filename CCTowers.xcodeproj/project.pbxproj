@@ -14,6 +14,7 @@
 		342C83531DD61257004920BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 342C83511DD61257004920BC /* Main.storyboard */; };
 		342C83551DD61257004920BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 342C83541DD61257004920BC /* Assets.xcassets */; };
 		342C83581DD61257004920BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 342C83561DD61257004920BC /* LaunchScreen.storyboard */; };
+		C27FECC11DD6AA0E002EFF82 /* Projectile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27FECC01DD6AA0E002EFF82 /* Projectile.swift */; };
 		C2A2947A1DD647ED0048D5ED /* Tower.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A294791DD647ED0048D5ED /* Tower.swift */; };
 		C2A2947C1DD666E20048D5ED /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A2947B1DD666E20048D5ED /* Unit.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		342C83541DD61257004920BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		342C83571DD61257004920BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		342C83591DD61257004920BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C27FECC01DD6AA0E002EFF82 /* Projectile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Projectile.swift; sourceTree = "<group>"; };
 		C2A294791DD647ED0048D5ED /* Tower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tower.swift; path = ../Tower.swift; sourceTree = "<group>"; };
 		C2A2947B1DD666E20048D5ED /* Unit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +74,7 @@
 				342C83561DD61257004920BC /* LaunchScreen.storyboard */,
 				342C83591DD61257004920BC /* Info.plist */,
 				C2A2947B1DD666E20048D5ED /* Unit.swift */,
+				C27FECC01DD6AA0E002EFF82 /* Projectile.swift */,
 			);
 			path = CCTowers;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C27FECC11DD6AA0E002EFF82 /* Projectile.swift in Sources */,
 				C2A2947C1DD666E20048D5ED /* Unit.swift in Sources */,
 				342C834E1DD61257004920BC /* GameScene.swift in Sources */,
 				342C83501DD61257004920BC /* GameViewController.swift in Sources */,

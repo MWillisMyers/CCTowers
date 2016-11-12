@@ -26,7 +26,7 @@ class Tower {
     init() {
         self.towerHealth = 1000
         self.gold = 300
-        self.army = [mage]
+        self.army = []
     }
     
     func getHealth() -> Int {
