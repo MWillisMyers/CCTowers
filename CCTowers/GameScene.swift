@@ -15,7 +15,9 @@ class GameScene: SKScene {
     
     
     var rollingCamera = SKCameraNode()
-    
+    var archerButton = SKSpriteNode()
+    var knightButton = SKSpriteNode()
+    var mageButton = SKSpriteNode()
     
 
     override func didMove(to view: SKView) {
@@ -26,11 +28,17 @@ class GameScene: SKScene {
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        
-    
-        
-    }
+            // Loop over all the touches in this event
+            for touch: AnyObject in touches {
+                // Get the location of the touch in this scene
+                let location = touch.location(self)
+                // Check if the location of the touch is within the button's bounds
+                if archerButton.containsPoint(location) {
+                    print("tapped!")
+                }
+            }
+        }
+       
     
     
     override func update(_ currentTime: TimeInterval) {
@@ -43,7 +51,7 @@ class GameScene: SKScene {
             let location = touch.location(in: self)
             let previousLocation = touch.previousLocation(in: self)
             let deltaX = location.x - previousLocation.x
-            rollingCamera.position.x += deltaX
+            rollingCamera.position.x -= deltaX
         }
     }
 
