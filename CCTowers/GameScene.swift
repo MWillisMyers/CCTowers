@@ -27,6 +27,11 @@ class GameScene: SKScene {
     var viking: SKNode! = nil
     let spawn = CGPoint(x: -1200, y: -800)
     let mySize = CGSize(width: 312, height: 272)
+    var aCounter: Bool = false
+    var kCounter: Bool = false
+    var mCounter: Bool = false
+    var vCounter: Bool = false
+    
     
 
     override func didMove(to view: SKView) {
@@ -69,24 +74,60 @@ class GameScene: SKScene {
                 let location = touch.location(in: self)
                 // Check if the location of the touch is within the button's bounds
                 if archerButton.contains(location) {
-                    print("ARCHER tapped!")
-                    archer.position = spawn
-                    self.addChild(archer)
+                    if aCounter {
+                        archer.removeFromParent()
+                        print("ARCHER tapped!")
+                        archer.position = spawn
+                        self.addChild(archer)
+                    } else {
+                        print("ARCHER tapped!")
+                        archer.position = spawn
+                        self.addChild(archer)
+                        aCounter = true
+                    }
+                    
                 }
                 if knightButton.contains(location) {
-                    print("KNIGHT tapped!")
-                    knight.position = spawn
-                    self.addChild(knight)
+                    if kCounter {
+                        knight.removeFromParent()
+                        print("KNIGHT tapped!")
+                        knight.position = spawn
+                        self.addChild(knight)
+                    } else {
+                        print("knight tapped!")
+                        knight.position = spawn
+                        self.addChild(knight)
+                        kCounter = true
+                    }
+                    
                 }
                 if mageButton.contains(location) {
-                    print("MAGE tapped!")
-                    mage.position = spawn
-                    self.addChild(mage)
+                    if mCounter {
+                        mage.removeFromParent()
+                        print("MAGE tapped!")
+                        mage.position = spawn
+                        self.addChild(mage)
+                    } else {
+                        print("MAGE tapped!")
+                        mage.position = spawn
+                        self.addChild(mage)
+                        mCounter = true
+                    }
+                    
                 }
                 if tankButton.contains(location) {
-                    print("TANK tapped!")
-                    viking.position = spawn
-                    self.addChild(viking)
+                    if vCounter {
+                        viking.removeFromParent()
+                        print("TANK tapped!")
+                        viking.position = spawn
+                        self.addChild(viking)
+                    } else {
+                        print("TANK tapped!")
+                        viking.position = spawn
+                        self.addChild(viking)
+                        vCounter = true
+                    }
+                    
                 }
             }
         }
