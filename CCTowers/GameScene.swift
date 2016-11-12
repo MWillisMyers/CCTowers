@@ -13,26 +13,22 @@ import SpriteKit
 
 class GameScene: SKScene {
     
-    var rangerNode = SKSpriteNode()
-    var rangerAtlas = SKTextureAtlas()
-    var rangerArray = [SKTexture]()
+    
+    var rollingCamera = SKCameraNode()
+    
+    
 
     override func didMove(to view: SKView) {
-        rangerAtlas = SKTextureAtlas(named: "ArcherWalking")
         
-        //for var i in 0...rangerAtlas.textureNames.count {
-    //        var Name = "Archer Girl_\(i).png"
-      //      rangerArray.append(SKTexture(imageNamed: Name))
-    //}
-    
-        //rangerNode = SKSpriteNode(imageNamed: rangerAtlas.textureNames[0])
-      //  rangerNode.size = CGSize(width: 70, height: 140)
-        //rangerNode.position = CGPoint(x: self.size.width / 2, y: self.size.height / 2)
-       // self.addChild(rangerNode)
+        rollingCamera = self.childNode(withName: "Camera") as! SKCameraNode
+        
     }
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        
+    
         
     }
     
@@ -41,6 +37,15 @@ class GameScene: SKScene {
         // Called before each frame is rendered
     }
     
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches {
+            let location = touch.location(in: self)
+            let previousLocation = touch.previousLocation(in: self)
+            let deltaX = location.x - previousLocation.x
+            rollingCamera.position.x += deltaX
+        }
+    }
 
 }
 
