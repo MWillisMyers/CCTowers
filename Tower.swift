@@ -38,6 +38,6 @@ class Tower {
     }
     
     func goldGen(kills: Int) {
-        self.gold += kills
+        self.gold += kills * 10
     }
 }
