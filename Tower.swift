@@ -82,11 +82,14 @@ class Tower {
             return false
         } else {
             return false
+            self.army.removeFirst()
         }
     }
 }
 
 class EnemyTower: Tower {
+    
+    var timer = Timer()
 
     func getRandEnemy() -> UnitType {
         var randNum = arc4random_uniform(4) + 1
@@ -109,6 +112,10 @@ class EnemyTower: Tower {
     }
     
     func spawnEnemies() {
-        var timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: Selector(self.addUnit(unit: self.getRandEnemy()) as! String), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: Selector(self.addUnit(unit: self.getRandEnemy()) as! String), userInfo: nil, repeats: true)
+    }
+    
+    func stopEnemies() {
+        timer.invalidate()
     }
 }
