@@ -126,7 +126,7 @@ class Mage: Unit {
     }
 }
 
-enum unitType {
+enum UnitType {
     case Melee
     case Ranged
     case Mage
