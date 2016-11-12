@@ -22,6 +22,8 @@ class Unit {
     var unitSpeed: Int
     var isLive: Bool = true
     var cost: Int
+    var posX: Int
+    var posY: Int
     
     init() {
         self.unitHealth = 80
@@ -29,6 +31,8 @@ class Unit {
         self.unitRange = 1
         self.unitSpeed = 10
         self.cost = 100
+        self.posX = 0
+        self.posY = 0
     }
     
     //  All the getters
@@ -46,6 +50,10 @@ class Unit {
     
     func getSpeed() -> Int {
         return self.unitSpeed
+    }
+    
+    func getPos() -> (Int, Int) {
+        return (self.posX, self.posY)
     }
     
     //  All the setters
@@ -123,6 +131,14 @@ class Mage: Unit {
         self.unitRange = 3
         self.unitSpeed = 15
         self.cost = 200
+    }
+}
+
+// Heavy class
+class Heavy: Unit {
+    
+    override init() {
+        super.init()
     }
 }
 
