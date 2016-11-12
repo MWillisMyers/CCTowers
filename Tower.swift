@@ -14,9 +14,11 @@ import Foundation
 //    func setHealth()
 //}
 
+// Call all classes
 let melee = Melee()
 let ranged = Ranged()
 let mage = Mage()
+let heavy = Heavy()
 
 class Tower {
     var towerHealth: Int
@@ -57,6 +59,11 @@ class Tower {
             if self.gold >= mage.cost {
                 self.army.append(mage)
                 self.gold -= mage.cost
+            }
+        case .Heavy:
+            if self.gold >= heavy.cost {
+                self.army.append(heavy)
+                self.gold -= heavy.cost
             }
         break
         }

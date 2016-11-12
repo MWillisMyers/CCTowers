@@ -139,6 +139,12 @@ class Heavy: Unit {
     
     override init() {
         super.init()
+        
+        self.unitHealth = 110
+        self.unitAttack = 30
+        self.unitRange = 1
+        self.unitSpeed = 5
+        self.cost = 250
     }
 }
 
@@ -146,4 +152,5 @@ enum UnitType {
     case Melee
     case Ranged
     case Mage
+    case Heavy
 }
