@@ -14,13 +14,21 @@ import SpriteKit
 class GameScene: SKScene {
     
     
+    var rollingCamera = SKCameraNode()
+    
+    
 
     override func didMove(to view: SKView) {
+        
+        rollingCamera = self.childNode(withName: "Camera") as! SKCameraNode
         
     }
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        
+    
         
     }
     
@@ -29,6 +37,15 @@ class GameScene: SKScene {
         // Called before each frame is rendered
     }
     
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches {
+            let location = touch.location(in: self)
+            let previousLocation = touch.previousLocation(in: self)
+            let deltaX = location.x - previousLocation.x
+            rollingCamera.position.x += deltaX
+        }
+    }
 
 }
 
