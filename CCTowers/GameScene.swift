@@ -7,16 +7,32 @@
 //
 
 import SpriteKit
-import GameplayKit
+
+
+
 
 class GameScene: SKScene {
     
+
+
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     let player = SKSpriteNode(imageNamed: "Spaceship")
     
+
     override func didMove(to view: SKView) {
+        super.didMove(to: view)
+        // 1
+        let borderBody = SKPhysicsBody(edgeLoopFrom: self.frame)
+        // 2
+        borderBody.friction = 0
+        // 3
+        self.physicsBody = borderBody
         
+
+    
+    
+
         player.position = CGPoint(x: size.width * 0.1, y: size.height * 0.5)
         
         // Get label node from scene and store it for use later
@@ -91,5 +107,6 @@ class GameScene: SKScene {
         // Called before each frame is rendered
     }
     
+
 }
 
