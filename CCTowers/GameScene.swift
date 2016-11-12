@@ -23,6 +23,7 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         
         rollingCamera = self.childNode(withName: "Camera") as! SKCameraNode
+        archerButton = self.childNode(withName: "ArcherButton") as! SKSpriteNode
         
     }
     
@@ -31,9 +32,9 @@ class GameScene: SKScene {
             // Loop over all the touches in this event
             for touch: AnyObject in touches {
                 // Get the location of the touch in this scene
-                let location = touch.location(self)
+                let location = touch.location(in: self)
                 // Check if the location of the touch is within the button's bounds
-                if archerButton.containsPoint(location) {
+                if archerButton.contains(location) {
                     print("tapped!")
                 }
             }
