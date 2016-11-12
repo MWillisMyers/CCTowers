@@ -87,8 +87,8 @@ class Tower {
         if self.isAlive {
             return false
         } else {
-            return false
             self.army.removeFirst()
+            return false
         }
     }
 }
