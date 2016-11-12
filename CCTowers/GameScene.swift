@@ -25,19 +25,21 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         
         rollingCamera = self.childNode(withName: "Camera") as! SKCameraNode
-        archerButton = SKSpriteNode(color: SKColor.red, size: CGSize(width: 100, height: 44))
-        archerButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY);
-        knightButton = SKSpriteNode(color: SKColor.red, size: CGSize(width: 100, height: 44))
-        knightButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY);
-        mageButton = SKSpriteNode(color: SKColor.red, size: CGSize(width: 100, height: 44))
-        mageButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY);
-        tankButton = SKSpriteNode(color: SKColor.red, size: CGSize(width: 100, height: 44))
-        tankButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY);
+        archerButton = SKSpriteNode(color: SKColor.red, size: CGSize(width: 150, height: 150))
+        archerButton.position = CGPoint(x: -589.701, y: 795);
+        knightButton = SKSpriteNode(color: SKColor.red, size: CGSize(width: 150, height: 150))
+        knightButton.position = CGPoint(x: -219.893, y: 795);
+        mageButton = SKSpriteNode(color: SKColor.red, size: CGSize(width: 150, height: 150))
+        mageButton.position = CGPoint(x: 175.643, y: 795);
+        tankButton = SKSpriteNode(color: SKColor.red, size: CGSize(width: 150, height: 150))
+        tankButton.position = CGPoint(x: 552.401, y: 795);
         
-        self.addChild(archerButton)
-        self.addChild(knightButton)
-        self.addChild(mageButton)
-        self.addChild(tankButton)
+        
+        
+        rollingCamera.addChild(archerButton)
+        rollingCamera.addChild(knightButton)
+        rollingCamera.addChild(mageButton)
+        rollingCamera.addChild(tankButton)
     }
     
     
