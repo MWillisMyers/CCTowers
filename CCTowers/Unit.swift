@@ -125,3 +125,9 @@ class Mage: Unit {
         self.cost = 200
     }
 }
+
+enum unitType {
+    case Melee
+    case Ranged
+    case Mage
+}
