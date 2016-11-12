@@ -24,11 +24,17 @@ class Tower {
     var towerHealth: Int
     var gold: Int
     var army: [Unit]
+    var attack: Int
+    var attackSpeed: Int
+    var range: Int
     
     init() {
         self.towerHealth = 1000
         self.gold = 300
         self.army = []
+        self.attack = 10
+        self.attackSpeed = 15
+        self.range = 3
     }
     
     func getHealth() -> Int {
