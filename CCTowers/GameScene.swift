@@ -14,7 +14,6 @@ import SpriteKit
 class GameScene: SKScene {
     
 
-
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     let player = SKSpriteNode(imageNamed: "Spaceship")
@@ -28,7 +27,6 @@ class GameScene: SKScene {
         borderBody.friction = 0
         // 3
         self.physicsBody = borderBody
-        
 
     
     
