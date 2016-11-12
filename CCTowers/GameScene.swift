@@ -21,8 +21,16 @@ class GameScene: SKScene {
     var mageButton: SKNode! = nil
     var tankButton: SKNode! = nil
     
+    var archer: SKNode! = nil
+    var knight: SKNode! = nil
+    var mage: SKNode! = nil
+    var viking: SKNode! = nil
+    let spawn = CGPoint(x: 10, y: 30)
+    
 
     override func didMove(to view: SKView) {
+        
+        
         
         rollingCamera = self.childNode(withName: "Camera") as! SKCameraNode
         archerButton = SKSpriteNode(color: SKColor.red, size: CGSize(width: 150, height: 150))
@@ -35,11 +43,19 @@ class GameScene: SKScene {
         tankButton.position = CGPoint(x: 552.401, y: 795);
         
         
-        
         rollingCamera.addChild(archerButton)
         rollingCamera.addChild(knightButton)
         rollingCamera.addChild(mageButton)
         rollingCamera.addChild(tankButton)
+
+        archer = SKSpriteNode(imageNamed: "Archer Lady.png")
+        knight = SKSpriteNode(imageNamed: "Knight Dude.png")
+        knight.position = spawn
+        mage = SKSpriteNode(imageNamed: "Mage.png")
+        mage.position = spawn
+        viking = SKSpriteNode(imageNamed: "Viking.png")
+        viking.position = spawn
+        
     }
     
     
@@ -51,6 +67,8 @@ class GameScene: SKScene {
                 // Check if the location of the touch is within the button's bounds
                 if archerButton.contains(location) {
                     print("ARCHER tapped!")
+                    archer.position = spawn
+                    self.addChild(archer)
                 }
                 if knightButton.contains(location) {
                     print("KNIGHT tapped!")
