@@ -29,6 +29,8 @@ class Tower {
     var range: Int
     var isAlive: Bool
     
+    var goldTimer = Timer()
+    
     init() {
         self.towerHealth = 1000
         self.gold = 300
@@ -47,8 +49,12 @@ class Tower {
         self.towerHealth = health
     }
     
-    func goldGen(kills: Int) {
+    func goldKills(kills: Int) {
         self.gold += kills * 10
+    }
+    
+    func goldGen() {
+        goldTimer = Timer.scheduledTimer(withTimeInterval: 15, repeats: true, block: {_ in self.gold += 15})
     }
     
     func addUnit(unit: UnitType) {
@@ -81,12 +87,15 @@ class Tower {
         if self.isAlive {
             return false
         } else {
+            self.army.removeFirst()
             return false
         }
     }
 }
 
 class EnemyTower: Tower {
+    
+    var timer = Timer()
 
     func getRandEnemy() -> UnitType {
         var randNum = arc4random_uniform(4) + 1
@@ -109,6 +118,10 @@ class EnemyTower: Tower {
     }
     
     func spawnEnemies() {
-        var timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: Selector(self.addUnit(unit: self.getRandEnemy()) as! String), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: Selector(self.addUnit(unit: self.getRandEnemy()) as! String), userInfo: nil, repeats: true)
+    }
+    
+    func stopEnemies() {
+        timer.invalidate()
     }
 }
