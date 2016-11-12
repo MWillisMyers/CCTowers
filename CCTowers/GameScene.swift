@@ -16,16 +16,17 @@ class GameScene: SKScene {
     
     
     var rollingCamera = SKCameraNode()
-    var archerButton: SKNode! = nil
-    var knightButton: SKNode! = nil
-    var mageButton: SKNode! = nil
-    var tankButton: SKNode! = nil
+    var archerButton: SKSpriteNode! = nil
+    var knightButton: SKSpriteNode! = nil
+    var mageButton: SKSpriteNode! = nil
+    var tankButton: SKSpriteNode! = nil
     
     var archer: SKNode! = nil
     var knight: SKNode! = nil
     var mage: SKNode! = nil
     var viking: SKNode! = nil
-    let spawn = CGPoint(x: 10, y: 30)
+    let spawn = CGPoint(x: -1200, y: -800)
+    let mySize = CGSize(width: 312, height: 272)
     
 
     override func didMove(to view: SKView) {
@@ -33,14 +34,19 @@ class GameScene: SKScene {
         
         
         rollingCamera = self.childNode(withName: "Camera") as! SKCameraNode
-        archerButton = SKSpriteNode(color: SKColor.red, size: CGSize(width: 150, height: 150))
+//        archerButton = SKSpriteNode(color: SKColor.red, size: CGSize(width: 150, height: 150))
+        archerButton = SKSpriteNode(imageNamed: "Archer Button.png")
         archerButton.position = CGPoint(x: -589.701, y: 795);
-        knightButton = SKSpriteNode(color: SKColor.red, size: CGSize(width: 150, height: 150))
+        archerButton.size = mySize
+        knightButton = SKSpriteNode(imageNamed: "Knight Button.png")
         knightButton.position = CGPoint(x: -219.893, y: 795);
-        mageButton = SKSpriteNode(color: SKColor.red, size: CGSize(width: 150, height: 150))
+        knightButton.size = mySize
+        mageButton = SKSpriteNode(imageNamed: "Mage Button.png")
         mageButton.position = CGPoint(x: 175.643, y: 795);
-        tankButton = SKSpriteNode(color: SKColor.red, size: CGSize(width: 150, height: 150))
+        mageButton.size = mySize
+        tankButton = SKSpriteNode(imageNamed: "Viking Button.png")
         tankButton.position = CGPoint(x: 552.401, y: 795);
+        tankButton.size = mySize
         
         
         rollingCamera.addChild(archerButton)
