@@ -20,6 +20,8 @@ class GameScene: SKScene {
     var knightButton: SKNode! = nil
     var mageButton: SKNode! = nil
     var tankButton: SKNode! = nil
+    var archer: SKNode! = nil
+    
     
 
     override func didMove(to view: SKView) {
@@ -33,6 +35,10 @@ class GameScene: SKScene {
         mageButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY);
         tankButton = SKSpriteNode(color: SKColor.red, size: CGSize(width: 100, height: 44))
         tankButton.position = CGPoint(x: self.frame.midX, y: self.frame.midY);
+        
+        archer = SKSpriteNode(imageNamed: "Archer Lady.png")
+        archer.position = CGPoint(x: 100, y: 100)
+        self.addChild(archer)
         
         self.addChild(archerButton)
         self.addChild(knightButton)
