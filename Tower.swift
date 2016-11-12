@@ -26,7 +26,7 @@ class Tower {
     init() {
         self.towerHealth = 1000
         self.gold = 300
-        self.army = [mage]
+        self.army = []
     }
     
     func getHealth() -> Int {
@@ -38,6 +38,27 @@ class Tower {
     }
     
     func goldGen(kills: Int) {
-        self.gold += kills
+        self.gold += kills * 10
+    }
+    
+    func addUnit(unit: UnitType) {
+        switch unit {
+        case .Melee:
+            if self.gold >= melee.cost {
+                self.army.append(melee)
+                self.gold -= melee.cost
+            }
+        case .Ranged:
+            if self.gold >= ranged.cost {
+                self.army.append(ranged)
+                self.gold -= ranged.cost
+            }
+        case .Mage:
+            if self.gold >= mage.cost {
+                self.army.append(mage)
+                self.gold -= mage.cost
+            }
+        break
+        }
     }
 }
